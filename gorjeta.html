@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gorjeta</title>
+    <link rel="stylesheet" href="gorjeta.css">
+</head>
+<body>
+    <div id="container">
+        <h1>GORJETA</h1>
+
+        <div id="calculadoragorj">
+            <form>
+                <p>Quanto foi sua conta?</p>
+                <span>
+                    <label for="conta">R$</label>
+                    <input type="text" id="conta" name="conta">
+                </span>
+                <p>Qual foi a qualidade do serviço?</p>
+                <select name="serviço" id="serv">
+                    <option disabled selected value ="0">-- Escolha uma Opção --</option>
+                    <option value="0.3">30&#37; &#45; Maravilhoso</option>
+                    <option value="0.2">20&#37; &#45; Bom</option>
+                    <option value="0.15">15&#37; &#45; Foi Ok</option>
+                    <option value="0.1">10&#37; &#45; Ruim</option>
+                    <option value="0.05">5&#37; &#45; Péssimo</option>
+                </select>
+            </form>
+            
+            <p>Quantas pessoas estão dividindo a conta?</p>
+            <span>
+                <input type="text" id="numpessoas">
+                <label for="numpessoas">pessoas</label>
+            </span>
+            <input type="button" id="calc" value="CALCULAR!" onclick="calculogorj()" >
+        </div><!--fim calculadora-->
+
+        <div id="resultado"><!--resultado-->
+            <sup>R$</sup><span id="valgorj">0.00</span><!--span(elemento inline para manter na mesma linha do <sup>)-->
+            <small id="cada">cada</small>  
+        </div><!--fim container-->
+    </div>
+    <script type="text/javascript" src="gorjeta.js"></script>
+</body>
+</html>
